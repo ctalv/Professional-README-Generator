@@ -45,63 +45,63 @@ const questions = [
         name: 'email',
         message: 'Enter your email.',
     },
-    
+
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const content = JSON.stringify(data)
+    
     fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Successfully created README file!')
+        err ? console.log(err) : console.log('Successfully created README file!')
     )
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    const generateREADME =
-    `# Project Title
+    const generateREADME = ({ title, description, install, usage, contribution, test, license, email }) =>
+   `# ${title}
 
-    ## Description
+## Description
+${description}
     
+## Table of Contents 
     
-    ## Table of Contents 
-    
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    - [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
 
     
-    ## Installation
+## Installation
+${install}
     
-    
-    ## Usage
-    
+## Usage
+${usage}
  
-    ## Contributing
+## Contributing
+${contribution}
+
+## Tests
+${test}
     
+## Questions
+If you have any questions, email me at ${email}
 
-    ## Tests
+## License
+${license}
 
-    
-    ## Questions
-
-
-    ## License
-    
-    `;
+`;
 
     inquirer
-    .prompt([...questions])
-    .then((answers) => {
-        console.log(answers)
-        writeToFile('README.md', generateREADME);
-    }
-    )
+        .prompt([...questions])
+        .then((answers) => {
+            writeToFile('README.md', generateREADME(answers));
+        }
+        )
 
-    
+
 }
 
 // Function call to initialize app
