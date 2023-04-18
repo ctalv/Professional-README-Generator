@@ -6,19 +6,24 @@ const inquirer = require('inquirer');
 const questions = [
     {
         
+    },
+    {
+
     }
+    
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(`${fileName}.md`, data, (err) =>
+    const content = JSON.stringify(data)
+    fs.writeFile(fileName, data, (err) =>
     err ? console.log(err) : console.log('Successfully created README file!')
     )
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    const generateREADME = (...questions) =>
+    const generateREADME =
     `# Project Title
 
     ## Description
@@ -51,9 +56,9 @@ function init() {
 
     ## License
     
-    `
+    `;
 
-    writeToFile(generateREADME, 'cool')
+    writeToFile('README.md', generateREADME);
 }
 
 // Function call to initialize app
