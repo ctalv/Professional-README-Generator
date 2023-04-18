@@ -94,10 +94,14 @@ function init() {
     `;
 
     inquirer
-    .createPromptModule([...questions])
-    .then()
+    .prompt([...questions])
+    .then((answers) => {
+        console.log(answers)
+        writeToFile('README.md', generateREADME);
+    }
+    )
 
-    writeToFile('README.md', generateREADME);
+    
 }
 
 // Function call to initialize app
