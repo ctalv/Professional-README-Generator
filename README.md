@@ -1,33 +1,33 @@
-# Project Title
+# README Generator
 
-    ## Description
+## Description
+This is a simple CLI application for generating a professional readme for a project.
     
+## Table of Contents 
     
-    ## Table of Contents 
-    
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    - [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
 
     
-    ## Installation
+## Installation
+NA
     
-    
-    ## Usage
-    
+## Usage
+NA
  
-    ## Contributing
-    
+## Contributing
+NA
 
-    ## Tests
-
+## Tests
+Clone the repo and run node.
     
-    ## Questions
+## Questions
+If you have any questions, email me at clairetalverson@gmail.com
 
+## License
+MIT
 
-    ## License
-    
-    
