@@ -5,11 +5,46 @@ const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
     {
-        
+        type: 'input',
+        name: 'title',
+        message: 'What is the name of your project?',
     },
     {
-
-    }
+        type: 'input',
+        name: 'description',
+        message: 'Breifly describe your project.',
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'What are the installation instructions for your project?',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter the usage information for your project. Include a URL if deployed.',
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'What are the contribution guidelines for your project?',
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'What are the testing instructions for your project?',
+    },
+    {
+        type: 'checkbox',
+        name: 'license',
+        choices: ['Apache License 2.0', 'MIT'],
+        message: 'Select a license for your project.',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email.',
+    },
     
 ];
 
@@ -58,7 +93,15 @@ function init() {
     
     `;
 
-    writeToFile('README.md', generateREADME);
+    inquirer
+    .prompt([...questions])
+    .then((answers) => {
+        console.log(answers)
+        writeToFile('README.md', generateREADME);
+    }
+    )
+
+    
 }
 
 // Function call to initialize app
