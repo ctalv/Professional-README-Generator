@@ -1,7 +1,7 @@
-# README Generator
+# dfkg
 
 ## Description
-This is a simple CLI application for generating a professional readme for a project.
+kdjghdlfhg
     
 ## Table of Contents 
     
@@ -14,20 +14,20 @@ This is a simple CLI application for generating a professional readme for a proj
 
     
 ## Installation
-NA
+skdgfl
     
 ## Usage
-NA
+dfkjghdkfj
  
 ## Contributing
-NA
+fgdkjfgh
 
 ## Tests
-Clone the repo and run node.
+dfgkjdhfg
     
 ## Questions
-If you have any questions, email me at clairetalverson@gmail.com
+If you have any questions, email me at iosdjf@kjsdhfs.com
 
 ## License
-MIT
+Apache License 2.0
 

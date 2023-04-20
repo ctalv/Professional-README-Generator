@@ -45,12 +45,17 @@ const questions = [
         name: 'email',
         message: 'Enter your email.',
     },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'Enter your GitHub username.',
+    },
 
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+
     fs.writeFile(fileName, data, (err) =>
         err ? console.log(err) : console.log('Successfully created README file!')
     )
@@ -59,7 +64,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     const generateREADME = ({ title, description, install, usage, contribution, test, license, email }) =>
-   `# ${title}
+        `# ${title}
 
 ## Description
 ${description}
@@ -98,9 +103,7 @@ ${license}
         .prompt([...questions])
         .then((answers) => {
             writeToFile('README.md', generateREADME(answers));
-        }
-        )
-
+        })
 
 }
 
