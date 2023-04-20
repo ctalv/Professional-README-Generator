@@ -63,7 +63,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    const generateREADME = ({ title, description, install, usage, contribution, test, license, email }) =>
+    const generateREADME = ({ title, description, install, usage, contribution, test, license, email, username }) =>
         `# ${title}
 
 ## Description
@@ -92,7 +92,7 @@ ${contribution}
 ${test}
     
 ## Questions
-If you have any questions, email me at ${email}
+If you have any questions, email me at ${email} or message me on my GitHub at https://github.com/${username}.
 
 ## License
 ${license}
