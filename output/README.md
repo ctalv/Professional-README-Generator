@@ -1,6 +1,6 @@
 # safd
 
-![License](https://img.shields.io/badge/license-MIT-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Description
 asdfa

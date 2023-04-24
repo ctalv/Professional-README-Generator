@@ -99,7 +99,7 @@ ${test}
 If you have any questions, email me at ${email} or message me on my GitHub at https://github.com/${username}.
 
 ## License
-${license}
+This project is covered under the ${license} License.
 
 `;
 
