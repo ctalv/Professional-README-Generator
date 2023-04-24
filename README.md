@@ -1,6 +1,9 @@
 # Professional README Generator
 
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ## Description
+
 This is a node application for creating a professional README.
     
 ## Table of Contents 
@@ -14,15 +17,22 @@ This is a node application for creating a professional README.
 
     
 ## Installation
-You will need to install Node version 16 and the inquirer package.
+- Node v16
+- inquirer package (done in [Usage](#usage))
     
 ## Usage
 To use this application, you must:
 1. Download this repositiory to your local machine.
-2. In the terminal, download the inquire package: npm i inquirer
-3. In the terminal, type: node index.js
+2. In the terminal, download the inquirer package: 
+
+        npm i inquirer
+3. In the terminal, type:
+
+        node index.js
 4. Answer the questions.
 5. You will find your completed README in the output folder!
+
+Note: if you run the code again, it WILL overwrite your previously generated README.
  
 ## Contributing
 N/A
