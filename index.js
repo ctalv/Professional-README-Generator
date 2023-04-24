@@ -37,7 +37,7 @@ const questions = [
     {
         type: 'checkbox',
         name: 'license',
-        choices: ['Apache License 2.0', 'MIT','GBL','BDS'],
+        choices: ['Apache', 'MIT','GBL','BDS'],
         message: 'Select a license for your project.',
     },
     {
@@ -64,8 +64,11 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+
     const generateREADME = ({ title, description, install, usage, contribution, test, license, email, username }) =>
         `# ${title}
+
+![License](https://img.shields.io/badge/license-${license}-brightgreen)
 
 ## Description
 ${description}
@@ -108,5 +111,8 @@ ${license}
 
 }
 
+
 // Function call to initialize app
 init();
+
+
