@@ -37,7 +37,7 @@ const questions = [
     {
         type: 'checkbox',
         name: 'license',
-        choices: ['Apache License 2.0', 'MIT'],
+        choices: ['Apache License 2.0', 'MIT','GBL','BDS'],
         message: 'Select a license for your project.',
     },
     {
@@ -53,10 +53,11 @@ const questions = [
 
 ];
 
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-    fs.writeFile(fileName, data, (err) =>
+    fs.writeFile(`./output/${fileName}`, data, (err) =>
         err ? console.log(err) : console.log('Successfully created README file!')
     )
 }
