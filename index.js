@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -54,7 +54,7 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
 
     fs.writeFile(`./output/${fileName}`, data, (err) =>
@@ -62,13 +62,13 @@ function writeToFile(fileName, data) {
     )
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
 
     const generateREADME = ({ title, description, install, usage, contribution, test, license, email, username }) =>
         `# ${title}
 
-![License](https://img.shields.io/badge/license-${license}-brightgreen)
+![License](https://img.shields.io/badge/license-${license}-green)
 
 ## Description
 ${description}
@@ -110,7 +110,6 @@ This project is covered under the ${license} License.
         })
 
 }
-
 
 // Function call to initialize app
 init();
