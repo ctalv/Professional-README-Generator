@@ -37,7 +37,7 @@ const questions = [
     {
         type: 'checkbox',
         name: 'license',
-        choices: ['Apache License 2.0', 'MIT'],
+        choices: ['Apache', 'MIT','GBL','BDS'],
         message: 'Select a license for your project.',
     },
     {
@@ -45,21 +45,30 @@ const questions = [
         name: 'email',
         message: 'Enter your email.',
     },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'Enter your GitHub username.',
+    },
 
 ];
 
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
-    fs.writeFile(fileName, data, (err) =>
+
+    fs.writeFile(`./output/${fileName}`, data, (err) =>
         err ? console.log(err) : console.log('Successfully created README file!')
     )
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    const generateREADME = ({ title, description, install, usage, contribution, test, license, email }) =>
-   `# ${title}
+
+    const generateREADME = ({ title, description, install, usage, contribution, test, license, email, username }) =>
+        `# ${title}
+
+![License](https://img.shields.io/badge/license-${license}-brightgreen)
 
 ## Description
 ${description}
@@ -87,10 +96,10 @@ ${contribution}
 ${test}
     
 ## Questions
-If you have any questions, email me at ${email}
+If you have any questions, email me at ${email} or message me on my GitHub at https://github.com/${username}.
 
 ## License
-${license}
+This project is covered under the ${license} License.
 
 `;
 
@@ -98,11 +107,12 @@ ${license}
         .prompt([...questions])
         .then((answers) => {
             writeToFile('README.md', generateREADME(answers));
-        }
-        )
-
+        })
 
 }
 
+
 // Function call to initialize app
 init();
+
+
