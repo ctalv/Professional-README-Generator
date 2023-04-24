@@ -31,6 +31,8 @@ To use this application, you must:
         node index.js
 4. Answer the questions.
 5. You will find your completed README in the output folder!
+
+Note: if you run the code again, it WILL overwrite your previously generated README.
  
 ## Contributing
 N/A
