@@ -35,7 +35,7 @@ To use this application, you must:
 Note: if you run the code again, it WILL overwrite your previously generated README.
 
 
-[DEMO: Professional README Generator]https://github.com/ctalv/professional-readme-generator/assets/122413805/028c578e-f5a8-4eb8-bea4-4be3d0510142
+({https://github.com/ctalv/professional-readme-generator/assets/122413805/028c578e-f5a8-4eb8-bea4-4be3d0510142} "DEMO: Professional README Generator")
 
  
 ## Contributing
